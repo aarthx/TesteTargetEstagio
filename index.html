@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Teste Estágio Target</title>
+</head>
+
+<body>
+  <h1>Teste estágio Target</h1>
+  <section class="tarefa1">
+    <p class="pergunta">1) Observe o trecho de código abaixo: <br>
+      int INDICE = 13, SOMA = 0, K = 0; <br>
+      enquanto K < INDICE faça { K=K + 1; SOMA=SOMA + K; } imprimir(SOMA); <br>Ao final do processamento, qual será o valor da variável SOMA?</p>
+    <h3>Resposta:</h3>
+    <p class="resposta1"></p>
+  </section>
+  <section class="tarefa2">
+    <p class="pergunta">2) Dado a sequência de Fibonacci, onde se inicia por 0 e 1 e o próximo valor sempre será a soma dos 2 valores anteriores (exemplo: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34...), escreva um programa na linguagem que desejar onde, informado um número, ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o número informado pertence ou não a sequência.<br>
+      IMPORTANTE:<br>
+      Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
+    </p>
+    <h3>Resposta:</h3>
+    <div>
+      <label for="numero">Número a ser testado:</label>
+      <input type="number" id="numero">
+      <button id="teste">Testar</button>
+      <p class="resposta2"></p>
+    </div>
+  </section>
+  <section class="tarefa3">
+    <p class="pergunta">
+      3) Descubra a lógica e complete o próximo elemento: <br>
+      a) 1, 3, 5, 7, ___ <br>
+      b) 2, 4, 8, 16, 32, 64, ____ <br>
+      c) 0, 1, 4, 9, 16, 25, 36, ____ <br>
+      d) 4, 16, 36, 64, ____ <br>
+      e) 1, 1, 2, 3, 5, 8, ____ <br>
+      f) 2,10, 12, 16, 17, 18, 19, ____ <br>
+    </p>
+    <h3>Resposta:</h3>
+    <p class="resposta3">
+      a) 1, 3, 5, 7, <span>9</span> (O próximo numero é igual ao número anterior mais 2, ímpares) <br>
+      b) 2, 4, 8, 16, 32, 64, <span>128</span> (Múltiplos de 2) <br>
+      c) 0, 1, 4, 9, 16, 25, 36, <span>49</span> (Números com raizes inteiras, quadrados perfeitos, ou uma soma com uma sequencia de ímpares +1 +3 +5 ...)<br>
+      d) 4, 16, 36, 64, <span>100</span> (Quadrados perfeitos pares) <br>
+      e) 1, 1, 2, 3, 5, 8, <span>13</span> (Mesma lógica da sequência de Fibonacci da questão anterior sem começar com 0) <br>
+      f) 2,10, 12, 16, 17, 18, 19, <span>200</span> (Sequência de números cujo nome começa com 'd') <br>
+    </p>
+  </section>
+  <section class="tarefa4">
+    <p class="pergunta">
+      4) Dois veículos (um carro e um caminhão) saem respectivamente de cidades opostas pela mesma rodovia. O carro de Ribeirão Preto em direção a Franca, a uma velocidade constante de 110 km/h e o caminhão de Franca em direção a Ribeirão Preto a uma velocidade constante de 80 km/h. Quando eles se cruzarem na rodovia, qual estará mais próximo a cidade de Ribeirão Preto?<br>
+      IMPORTANTE:<br>
+      a) Considerar a distância de 100km entre a cidade de Ribeirão Preto <-> Franca.<br>
+        b) Considerar 2 pedágios como obstáculo e que o caminhão leva 5 minutos a mais para passar em cada um deles e o carro possui tag de pedágio (Sem Parar)<br>
+        c) Explique como chegou no resultado.
+    </p>
+    <h3>Resposta:</h3>
+    <p class="resposta4">
+      Pela lógica quando os dois se cruzarem, os dois estarão a <em>mesma distância de Ribeirão Preto</em>. <br>
+      Quanto a esta distância ela pode ser calculada, utilizando a formúla de movimento da física: S = So + vt <br>
+      considerando que o carro comece no ponto inicial So = 0 e o caminhão no ponto inicial So = 110km <br>
+      Aqui existem 3 situações quanto ao pedágio: <br>
+      1 - O caminhão passa os 2 antes de encontrar com o carro (dando uma vantagem de 10 minutos que são 1/6h para o carro) (110km/h * 1/6h = 18,33km) <br>
+      2 - O caminhão passar por apenas 1 pedágio antes de encontrar o carro (dando uma vantagem de 5 minutos que são 1/12h para o carro) (110km/h * 1/12h = 9,167km) <br>
+      3 - O caminhão passar pelos pedágios somente depois de encontrar o carro (sem vantagens para o carro) <br>
+      O valor do So do carro irá depender da situação <br>
+      Podemos então descobrir o momento t em que se encontram em cada situação igualando a posição final S e portanto suas equações, <br>
+      tendo então: <br>
+      Para a situação 1 -> 18,333 + 110t = 100 - 80t <br>
+      Para a situação 2 -> 9,167 + 110t = 100 - 80t <br>
+      Para a situação 3 -> 0 + 110t = 100 - 80t <br>
+      Resultando no seguinte tempo em cada situação (pós-pedágios se houver): <br>
+      Para a situação 1 -> t = 0,4298h <br>
+      Para a situação 2 -> t = 0,4781h <br>
+      Para a situação 3 -> t = 0,5263h <br>
+      O que resulta em uma distância para Ribeirão preto em cada situação de: <br>
+      Para a situação 1 -> S = 18,333 + 110 * 0,4298 = 65,61km <br>
+      Para a situação 2 -> S = 9,167 + 110 * 0,4781 = 61,75km <br>
+      Para a situação 3 -> S = 0 + 110 * 0,5263 = 57,89km <br>
+      Obs.: Dependendo do ponto onde se localiza os pedágios, haveria a possibilidade ainda do carro passar pelo caminhão enquanto ele estivese no pedágio mas não foi considerada
+    </p>
+  </section>
+  <section class="tarefa5">
+    <p class="pergunta">
+      5) Escreva um programa que inverta os caracteres de um string. <br>
+      IMPORTANTE: <br>
+      a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código; <br>
+      b) Evite usar funções prontas, como, por exemplo, reverse; <br>
+
+    </p>
+    <h3>Resposta:</h3>
+    <label for="string">String a ser testada:</label>
+    <input type="text" id="string">
+    <button id="teste2">Inverter</button>
+    <p class="resposta5"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

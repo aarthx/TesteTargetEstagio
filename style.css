@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600&display=swap');
+
+body {
+  padding: 3rem;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+section {
+  padding: 1rem;
+  margin: 0 0 1rem 0;
+  border: 2px solid black;
+}
+
+section p {
+  font-weight: bold;
+  margin: 0;
+  line-height: 2rem;
+}
+
+p[class^="resposta"] {
+  font-weight: bold;
+  color: green;
+}
+
+p.negativo {
+  color: red;
+}
+
+p span {
+  text-decoration: underline;
+}
